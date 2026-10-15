@@ -36,9 +36,16 @@
 
 **PG Lab AI 데스크톱 앱 사용을 권장합니다.** 사용 중인 플랫폼에 맞게 다운로드하세요:
 
-- [macOS](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI.dmg)
-- [Windows (베타)](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-Setup.exe)
-- Linux: [x86_64](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-x86_64.AppImage) · [ARM64](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-aarch64.AppImage)
+| 플랫폼 | 다운로드 |
+| --- | --- |
+| macOS 11+ (Apple 실리콘 및 Intel) | [PG-Lab-AI.dmg](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI.dmg) |
+| Windows 10/11 (베타) | [PG-Lab-AI-Setup.exe](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-Setup.exe) |
+| Linux x86_64 | [PG-Lab-AI-x86_64.AppImage](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-x86_64.AppImage) |
+| Linux ARM64 | [PG-Lab-AI-aarch64.AppImage](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-aarch64.AppImage) |
+| 명령줄 (macOS/Linux) | `curl -LsSf https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.sh \| sh` |
+| 명령줄 (Windows PowerShell) | `powershell -ExecutionPolicy Bypass -c "irm https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.ps1 \| iex"` |
+
+현재 릴리스: **[v1.0.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.0.0)** · [모든 릴리스](https://github.com/imrobintomar/PG-Lab-AI/releases) · 위 링크는 항상 최신 버전을 다운로드합니다.
 
 <details>
 <summary>독립 실행형 CLI를 선호하시나요? macOS 또는 Linux에 설치하세요</summary>

@@ -36,9 +36,16 @@ An AI-powered workspace for scientific discovery.
 
 **We recommend using the PG Lab AI desktop app.** Download it for your platform:
 
-- [macOS](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI.dmg)
-- [Windows (Beta)](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-Setup.exe)
-- Linux: [x86_64](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-x86_64.AppImage) · [ARM64](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-aarch64.AppImage)
+| Platform | Download |
+| --- | --- |
+| macOS 11+ (Apple silicon & Intel) | [PG-Lab-AI.dmg](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI.dmg) |
+| Windows 10/11 (Beta) | [PG-Lab-AI-Setup.exe](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-Setup.exe) |
+| Linux x86_64 | [PG-Lab-AI-x86_64.AppImage](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-x86_64.AppImage) |
+| Linux ARM64 | [PG-Lab-AI-aarch64.AppImage](https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/PG-Lab-AI-aarch64.AppImage) |
+| Command line (macOS/Linux) | `curl -LsSf https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.sh \| sh` |
+| Command line (Windows PowerShell) | `powershell -ExecutionPolicy Bypass -c "irm https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.ps1 \| iex"` |
+
+Current release: **[v1.0.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.0.0)** · [All releases](https://github.com/imrobintomar/PG-Lab-AI/releases) · The links above always download the latest version.
 
 <details>
 <summary>Prefer the standalone CLI? Install on macOS or Linux</summary>
