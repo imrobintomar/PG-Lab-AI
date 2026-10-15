@@ -103,6 +103,18 @@ const LOGS: &str = include_str!("../../agent-skills/orx-logs/SKILL.md");
 const RESULTS: &str = include_str!("../../agent-skills/orx-results/SKILL.md");
 const CUSTOMIZE: &str = include_str!("../../agent-skills/orx-customize/SKILL.md");
 const PAPER: &str = include_str!("../../agent-skills/orx-paper/SKILL.md");
+const FASTQ: &str = include_str!("../../agent-skills/orx-fastq/SKILL.md");
+const FASTQ_RESOURCES: &[AgentSkillResource] = &[AgentSkillResource {
+    path: "assets/fetch_fastq.py",
+    content: include_str!("../../agent-skills/orx-fastq/assets/fetch_fastq.py"),
+}];
+const RNASEQ: &str = include_str!("../../agent-skills/orx-rnaseq/SKILL.md");
+const VARIANT_CALLING: &str = include_str!("../../agent-skills/orx-variant-calling/SKILL.md");
+const EXOME_ANALYSIS: &str = include_str!("../../agent-skills/orx-exome-analysis/SKILL.md");
+const EXOME_ANALYSIS_RESOURCES: &[AgentSkillResource] = &[AgentSkillResource {
+    path: "assets/panelapp.py",
+    content: include_str!("../../agent-skills/orx-exome-analysis/assets/panelapp.py"),
+}];
 const FIGURES: &str = include_str!("../../agent-skills/orx-figures/SKILL.md");
 const FIGURES_RESOURCES: &[AgentSkillResource] = &[
     AgentSkillResource {
@@ -136,6 +148,14 @@ const FIGURES_RESOURCES: &[AgentSkillResource] = &[
     AgentSkillResource {
         path: "references/diagram.md",
         content: include_str!("../../agent-skills/orx-figures/references/diagram.md"),
+    },
+    AgentSkillResource {
+        path: "references/omics.md",
+        content: include_str!("../../agent-skills/orx-figures/references/omics.md"),
+    },
+    AgentSkillResource {
+        path: "references/clinical.md",
+        content: include_str!("../../agent-skills/orx-figures/references/clinical.md"),
     },
     AgentSkillResource {
         path: "assets/orx_figstyle.py",
@@ -210,9 +230,33 @@ const S_PAPER: AgentSkill = AgentSkill {
     content: PAPER,
     resources: &[],
 };
+const S_FASTQ: AgentSkill = AgentSkill {
+    name: "orx-fastq",
+    description: "Download public sequencing reads (FASTQ) for a BioProject, SRA/ENA/DDBJ study, sample, experiment, run, or GEO series/sample accession, with checksums and a samplesheet. Use when the user gives a project ID or accession (PRJNA…, PRJEB…, SRP…, SRR…, ERR…, GSE…, GSM…) or asks to fetch, reanalyze, or reproduce public sequencing data.",
+    content: FASTQ,
+    resources: FASTQ_RESOURCES,
+};
+const S_RNASEQ: AgentSkill = AgentSkill {
+    name: "orx-rnaseq",
+    description: "Analyze bulk RNA-seq from FASTQ to differential expression: design check, QC, Salmon or nf-core/rnaseq quantification, DESeq2, enrichment, and methods text. Use when the user has RNA-seq reads or counts, asks for differential expression, DEGs, pathway or GSEA analysis, or wants to reanalyze a GEO/SRA RNA-seq study.",
+    content: RNASEQ,
+    resources: &[],
+};
+const S_VARIANT_CALLING: AgentSkill = AgentSkill {
+    name: "orx-variant-calling",
+    description: "Call germline (and tumor-only somatic) variants from exome or genome FASTQ with the PG Lab's ExomeFlow pipeline: references, capture kits, trios and cohorts, CNV, and QC gates before interpretation. Use when the user has WES/WGS/exome reads, asks for variant calling, a VCF, GATK, joint genotyping, or a trio analysis.",
+    content: VARIANT_CALLING,
+    resources: &[],
+};
+const S_EXOME_ANALYSIS: AgentSkill = AgentSkill {
+    name: "orx-exome-analysis",
+    description: "Interpret annotated exome/genome variants downstream of calling: VariantFlow filtering, ACMG review, phenotype (HPO) and gene-panel prioritization, trio/family inheritance, consanguinity, cohort burden, and candidate reports. Use when the user has ANNOVAR/ExomeFlow output or a VCF and asks for candidate variants, a diagnosis, segregation, gene burden, or exome results.",
+    content: EXOME_ANALYSIS,
+    resources: EXOME_ANALYSIS_RESOURCES,
+};
 const S_FIGURES: AgentSkill = AgentSkill {
     name: "orx-figures",
-    description: "Create or update interactive HTML charts for chat and static publication figures. Invoke before writing plotting code or when an existing figure needs correction; use `orx-results` for experiment interpretation and `orx-logs` for retrieving measurements.",
+    description: "Create or update interactive HTML charts for chat and static publication figures, including omics (volcano, PCA, heatmap, enrichment) and clinical (Kaplan–Meier, forest, CONSORT) manuscript figures at journal sizes. Invoke before writing plotting code or when a figure needs correction; use `orx-results` for experiment interpretation and `orx-logs` for measurements.",
     content: FIGURES,
     resources: FIGURES_RESOURCES,
 };
@@ -244,6 +288,10 @@ pub fn skills(set: SkillSet) -> Vec<&'static AgentSkill> {
             &S_PAPER,
             &S_CUSTOMIZE,
             &S_LIT,
+            &S_FASTQ,
+            &S_RNASEQ,
+            &S_VARIANT_CALLING,
+            &S_EXOME_ANALYSIS,
         ],
         SkillSet::Full => vec![
             &S_CREATE,
@@ -258,6 +306,10 @@ pub fn skills(set: SkillSet) -> Vec<&'static AgentSkill> {
             &S_PAPER,
             &S_CUSTOMIZE,
             &S_LIT,
+            &S_FASTQ,
+            &S_RNASEQ,
+            &S_VARIANT_CALLING,
+            &S_EXOME_ANALYSIS,
         ],
     }
 }

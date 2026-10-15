@@ -28,6 +28,14 @@ COLUMN = 3.25  # one column of a two-column paper (ICML, CVPR, IEEE)
 TEXT = 5.5  # \textwidth of a single-column paper (NeurIPS, article)
 WIDE = 6.75  # both columns of a two-column paper (figure*)
 
+# Biomedical journal widths in inches (check the target journal's guidelines).
+NATURE_SINGLE = 3.5  # Nature / Springer Nature: 89 mm
+NATURE_DOUBLE = 7.2  # Nature / Springer Nature: 183 mm
+ELSEVIER_SINGLE = 3.54  # Elsevier (J Pediatr Surg, J Pediatr Urol): 90 mm
+ELSEVIER_ONE_HALF = 5.51  # Elsevier: 140 mm
+ELSEVIER_DOUBLE = 7.48  # Elsevier: 190 mm
+JOURNAL_WIDTHS = (NATURE_SINGLE, NATURE_DOUBLE, ELSEVIER_SINGLE, ELSEVIER_ONE_HALF, ELSEVIER_DOUBLE)
+
 # Okabe-Ito: distinguishable under every common form of color blindness and in
 # greyscale print. Use in this order so the first two series stay the furthest
 # apart.
@@ -199,10 +207,11 @@ def _audit(fig) -> list[str]:
         )
 
     width = fig.get_size_inches()[0]
-    if not any(abs(width - known) < 0.02 for known in (COLUMN, TEXT, WIDE)):
+    if not any(abs(width - known) < 0.02 for known in (COLUMN, TEXT, WIDE, *JOURNAL_WIDTHS)):
         problems.append(
             f"width {width:.2f}in is not a known column width "
-            f"({COLUMN}/{TEXT}/{WIDE}); it will be rescaled on import and the text with it"
+            f"({COLUMN}/{TEXT}/{WIDE}, or a journal width in JOURNAL_WIDTHS); "
+            "it will be rescaled on import and the text with it"
         )
 
     for ax in fig.axes:

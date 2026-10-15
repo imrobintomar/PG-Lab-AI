@@ -124,10 +124,14 @@ list, with one-line descriptions, is printed at the end of `orx skill` output):
 - **orx-logs** — retrieve persisted run output for progress, debugging, or measurements.
 - **orx-results** — interpret, compare, and summarize measured experiment outcomes.
 - **orx-reports** — write durable research outputs into the project's artifacts directory.
-- **orx-figures** — publication-quality figures in matplotlib or TikZ. Load it **before** writing any plotting code, then read the one reference for that figure type.
+- **orx-figures** — publication-quality figures in matplotlib or TikZ, including omics (volcano, PCA, heatmap, enrichment) and clinical (Kaplan–Meier, forest, CONSORT) manuscript figures. Load it **before** writing any plotting code, then read the one reference for that figure type.
 - **orx-customize** — add reusable skills and LaTeX templates across projects.
 - **orx-paper** — draft a paper or preprint as LaTeX that renders and compiles to PDF.
 - **orx-lit-review** — main-agent cross-corpus retrieval, source-selective follow-up policy, and paper content; the preferred starting point for academic/research queries.
+- **orx-fastq** — download public FASTQ for a BioProject/SRA/ENA/GEO accession with checksums and a samplesheet.
+- **orx-rnaseq** — bulk RNA-seq from FASTQ to DESeq2 differential expression, enrichment, and methods.
+- **orx-variant-calling** — germline exome/genome variant calling with ExomeFlow, trios, cohorts, CNV, and QC gates.
+- **orx-exome-analysis** — VariantFlow interpretation: ACMG review, HPO and PanelApp gene panels, inheritance, burden.
 
 ## Typical workflow
 

@@ -1,6 +1,6 @@
 ---
 name: orx-figures
-description: "Create or update interactive HTML charts for chat and static publication figures. Invoke before writing plotting code or when an existing figure needs correction; use `orx-results` for experiment interpretation and `orx-logs` for retrieving measurements."
+description: "Create or update interactive HTML charts for chat and static publication figures, including omics (volcano, PCA, heatmap, enrichment) and clinical (Kaplan–Meier, forest, CONSORT) manuscript figures at journal sizes. Invoke before writing plotting code or when a figure needs correction; use `orx-results` for experiment interpretation and `orx-logs` for measurements."
 ---
 
 Prefer interactive HTML for suitable experiment metrics in chat, and static vector
@@ -225,6 +225,8 @@ Pick by the question the figure answers, not by the shape you have in mind.
 | What is traded off against what — reward vs KL, quality vs cost or latency? | [references/pareto.md](references/pareto.md) |
 | What does this 2D grid, confusion matrix, or sweep look like? | [references/matrix.md](references/matrix.md) |
 | What is the method, architecture, or pipeline? | [references/diagram.md](references/diagram.md) |
+| Which genes or pathways changed, how samples group, where variants fall (volcano, MA, PCA, heatmap, enrichment, Manhattan, lollipop)? | [references/omics.md](references/omics.md) |
+| How do patient outcomes, effects, or study flow look (Kaplan–Meier, forest plot, CONSORT/STROBE, group comparison, ROC, Bland–Altman)? | [references/clinical.md](references/clinical.md) |
 
 Every reference's template writes to `figs/`, which is the paper destination.
 For a report or a chat answer, adapt the template's script and output paths to
@@ -233,7 +235,7 @@ the folder chosen per `orx-reports`.
 Do not read references for figures you are not making. If an installed
 reference cannot be read, `orx skill figures/<name>` prints it.
 
-Anything genuinely outside those six — a photograph, a qualitative sample
+Anything genuinely outside those eight — a photograph, a qualitative sample
 grid, a map — still obeys the non-negotiables above and the style module.
 
 ## Before you hand it over
