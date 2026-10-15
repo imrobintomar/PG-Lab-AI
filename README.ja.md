@@ -45,7 +45,7 @@
 | コマンドライン（macOS/Linux） | `curl -LsSf https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.sh \| sh` |
 | コマンドライン（Windows PowerShell） | `powershell -ExecutionPolicy Bypass -c "irm https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.ps1 \| iex"` |
 
-現在のリリース：**[v1.0.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.0.0)** · [すべてのリリース](https://github.com/imrobintomar/PG-Lab-AI/releases) · 上のリンクは常に最新版をダウンロードします。
+現在のリリース：**[v1.1.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.1.0)** · [すべてのリリース](https://github.com/imrobintomar/PG-Lab-AI/releases) · 上のリンクは常に最新版をダウンロードします。
 
 <details>
 <summary>スタンドアロンの CLI を使いたい場合：macOS または Linux にインストール</summary>

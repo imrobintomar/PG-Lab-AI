@@ -45,7 +45,7 @@ An AI-powered workspace for scientific discovery.
 | Command line (macOS/Linux) | `curl -LsSf https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.sh \| sh` |
 | Command line (Windows PowerShell) | `powershell -ExecutionPolicy Bypass -c "irm https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.ps1 \| iex"` |
 
-Current release: **[v1.0.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.0.0)** · [All releases](https://github.com/imrobintomar/PG-Lab-AI/releases) · The links above always download the latest version.
+Current release: **[v1.1.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.1.0)** · [All releases](https://github.com/imrobintomar/PG-Lab-AI/releases) · The links above always download the latest version.
 
 <details>
 <summary>Prefer the standalone CLI? Install on macOS or Linux</summary>

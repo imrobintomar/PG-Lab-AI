@@ -1,6 +1,6 @@
 [package]
 name = "pg-lab-ai-cli"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 description = "PG Lab AI CLI (orx) — Rust port"
 repository = "https://github.com/imrobintomar/PG-Lab-AI"

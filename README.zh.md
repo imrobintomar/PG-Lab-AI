@@ -45,7 +45,7 @@
 | 命令行（macOS/Linux） | `curl -LsSf https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.sh \| sh` |
 | 命令行（Windows PowerShell） | `powershell -ExecutionPolicy Bypass -c "irm https://github.com/imrobintomar/PG-Lab-AI/releases/latest/download/pg-lab-ai-cli-installer.ps1 \| iex"` |
 
-当前版本：**[v1.0.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.0.0)** · [所有版本](https://github.com/imrobintomar/PG-Lab-AI/releases) · 上面的链接始终下载最新版本。
+当前版本：**[v1.1.0](https://github.com/imrobintomar/PG-Lab-AI/releases/tag/v1.1.0)** · [所有版本](https://github.com/imrobintomar/PG-Lab-AI/releases) · 上面的链接始终下载最新版本。
 
 <details>
 <summary>更喜欢独立 CLI？在 macOS 或 Linux 上安装</summary>
