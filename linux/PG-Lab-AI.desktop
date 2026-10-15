@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=PG Lab AI
+Comment=An AI-powered workspace for scientific discovery
+Exec=orx app
+Icon=PG-Lab-AI
+Categories=Development;
+Terminal=false
+StartupWMClass=PG-Lab-AI

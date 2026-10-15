@@ -1,0 +1,12 @@
+# Code owners. Requires "Require review from Code Owners" on the main branch
+# protection rule to be enforced. Owners must have write access.
+
+# Security-sensitive: release CI and the macOS signing pipeline handle (or can
+# reach) the Developer ID certificate. Changes here must be reviewed.
+/.github/workflows/             @imrobintomar
+/.github/actions/               @imrobintomar
+/.github/build-setup.yml        @imrobintomar
+/dist-workspace.toml            @imrobintomar
+/scripts/build-macos-app.sh     @imrobintomar
+/scripts/package-macos-app.sh   @imrobintomar
+/macos/                         @imrobintomar
